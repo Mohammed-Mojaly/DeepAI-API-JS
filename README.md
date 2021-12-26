@@ -1,3 +1,3 @@
 # DeepAI-API-JS
 
-Simple project for use DeepAI API by javascript.
+Simple project for using DeepAI API by javascript.
