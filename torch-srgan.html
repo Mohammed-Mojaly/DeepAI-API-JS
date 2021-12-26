@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="shortcut icon" href="https://mohammedmojaly.me/favicon.ico">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+      <link rel="stylesheet" href="style.css">
+    <title>Deep AI API</title>
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="index.html">Deep AI API</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+         <ul class="navbar-nav mr-auto">
+             <li class="nav-item">
+              <a class="nav-link" href="colorizer.html">Colorization</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="text2img.html">Text To Image API</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="torch-srgan.html">Super Resolution</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="tonify.html">Toonify API</a>
+            </li>
+           
+          </ul>
+          
+        </div>
+      </nav>
+
+
+
+
+    <div class="container">
+	   <div class="row mt-5">
+            <div class="col-lg-9">
+
+                <h3>Super Resolution API</h3>
+                <p>The Super Resolution API uses machine learning to clarify, sharpen, and upscale the photo without losing its content and defining characteristics. Blurry images are unfortunately common and are a problem for professionals and hobbyists alike. Super resolution uses machine learning techniques to upscale images in a fraction of a second.</p>
+                
+            </div>
+            <div class="col-lg-3">
+
+                <img src="img/Super-Resolution-API.jpg" alt="" style="width: 100%;">
+                
+            </div>
+        </div>
+        <br><br>
+     
+        <button class="btn btn-outline-secondary" id="switch_file_btn" type="button" onclick="display_file_input();">Upload Image</button>
+        <button class="btn btn-outline-secondary" id="switch_url_btn" type="button" onclick="display_url_input();">URL</button>
+
+        
+       
+       
+        <div class="col-sm-6 mt-3  d-none" id="upload_img">
+
+            <div class="custom-file">
+                <input type="file" class="custom-file-input" id="input-img">
+                <label class="custom-file-label" for="validatedCustomFile">Choose file...</label>
+                <button class="btn btn-primary" id="btn_input_process" type="button" onclick="show_from_inputfile('torch-srgan');">Process</button>
+
+            </div>
+        </div>
+
+        <div class="col-sm-6 mt-3  d-none" id="from_url">
+
+
+            <div class="input-group">
+                <div class="input-group-prepend">
+                    <span class="input-group-text" id="basic-addon3">URL</span>
+                </div>
+                <input type="text" class="form-control" id="img-url" aria-describedby="basic-addon3">
+                <button class="btn btn-primary" id="btn_url_process" type="button" onclick="show_from_url('torch-srgan');">Process</button>
+            </div>
+        </div>
+
+
+
+        <div class="col-sm-6 mt-3 d-none" id="output_div">
+            <div class="text-center">    
+                <img src=""class="img-fluid mt-3"  id="output"/>
+                <a href="" class="btn btn-success mt-2 text-center" id="dwm-link" download="w3logo">
+
+                    Download
+                </a>
+            </div>
+
+        </div>
+        <div class="col-sm-6 mt-5">
+           
+        </div>
+
+
+    </div>
+    <div class="text-center" id="footer">
+
+     
+            <a href="http://mohammedmojaly.me/">Mohammed Mojaly</a>
+        
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.deepai.org/deepai.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
